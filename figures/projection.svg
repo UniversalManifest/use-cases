@@ -1,82 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Helvetica, Arial, sans-serif">
-  <rect width="900" height="520" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="560" fill="#ffffff"/>
 
-  <text x="150" y="36" font-size="16" font-weight="bold" fill="#111">What the Subject carries</text>
-  <text x="640" y="36" font-size="16" font-weight="bold" fill="#111">What the Service receives</text>
+  <text x="205" y="36" text-anchor="middle" font-size="16" font-weight="bold" fill="#111">What the Subject carries</text>
+  <text x="710" y="36" text-anchor="middle" font-size="16" font-weight="bold" fill="#111">What the Service receives</text>
 
   <!-- subject box -->
-  <rect x="40" y="52" width="330" height="376" fill="none" stroke="#111" stroke-width="2"/>
-  <!-- service box -->
-  <rect x="540" y="52" width="320" height="212" fill="none" stroke="#111" stroke-width="2"/>
+  <rect x="40" y="52" width="330" height="378" fill="none" stroke="#111" stroke-width="2"/>
 
-  <!-- rows -->
+  <!-- service box -->
+  <rect x="560" y="52" width="300" height="196" fill="none" stroke="#111" stroke-width="2"/>
+
+  <!-- subject rows -->
   <g font-size="14" fill="#111">
-    <text x="64" y="88">Identity claim</text>
-    <text x="64" y="128">Age verification</text>
-    <text x="64" y="168">Consent: data retention</text>
-    <text x="64" y="208">Payment method</text>
-    <text x="64" y="248">Consent: marketing contact</text>
-    <text x="64" y="288">Shipping address</text>
-    <text x="64" y="336">Health records</text>
-    <text x="64" y="376">Government ID scan</text>
+    <text x="62" y="92">Identity claim</text>
+    <text x="62" y="132">Age verification</text>
+    <text x="62" y="172">Consent: data retention</text>
+    <text x="62" y="212">Payment method</text>
+    <text x="62" y="256">Consent: marketing contact</text>
+    <text x="62" y="306">Shipping address</text>
+    <text x="62" y="360">Health records</text>
+    <text x="62" y="396">Government ID scan</text>
   </g>
 
-  <!-- crossing arrows for released -->
+  <!-- sealed group -->
+  <rect x="50" y="334" width="310" height="84" fill="none" stroke="#111" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="62" y="414" font-size="11.5" fill="#777">sealed for this receiver type</text>
+
+  <!-- released arrows -->
   <g stroke="#111" stroke-width="2" fill="none">
-    <line x1="378" y1="84" x2="528" y2="88"/><polygon points="540,88 524,81 524,95" fill="#111" stroke="none"/>
-    <line x1="378" y1="124" x2="528" y2="128"/><polygon points="540,128 524,121 524,135" fill="#111" stroke="none"/>
-    <line x1="378" y1="164" x2="528" y2="168"/><polygon points="540,168 524,161 524,175" fill="#111" stroke="none"/>
-    <line x1="378" y1="204" x2="528" y2="208"/><polygon points="540,208 524,201 524,215" fill="#111" stroke="none"/>
+    <line x1="378" y1="88" x2="540" y2="88"/><polygon points="552,88 536,81 536,95" fill="#111" stroke="none"/>
+    <line x1="378" y1="128" x2="540" y2="128"/><polygon points="552,128 536,121 536,135" fill="#111" stroke="none"/>
+    <line x1="378" y1="168" x2="540" y2="168"/><polygon points="552,168 536,161 536,175" fill="#111" stroke="none"/>
+    <line x1="378" y1="208" x2="540" y2="208"/><polygon points="552,208 536,201 536,215" fill="#111" stroke="none"/>
   </g>
 
   <!-- denied -->
   <g stroke="#111" stroke-width="2">
-    <line x1="378" y1="244" x2="452" y2="244"/>
-    <line x1="462" y1="234" x2="482" y2="254"/>
-    <line x1="482" y1="234" x2="462" y2="254"/>
+    <line x1="378" y1="252" x2="438" y2="252"/>
+    <line x1="448" y1="242" x2="468" y2="262"/>
+    <line x1="468" y1="242" x2="448" y2="262"/>
   </g>
-  <text x="492" y="249" font-size="13" fill="#111">denied by the Subject's rule</text>
+  <text x="459" y="282" text-anchor="middle" font-size="12" fill="#111">denied by rule</text>
 
   <!-- not requested -->
-  <g stroke="#111" stroke-width="2" stroke-dasharray="5 5">
-    <line x1="378" y1="284" x2="452" y2="284"/>
+  <g stroke="#111" stroke-width="2" stroke-dasharray="5 5" fill="none">
+    <line x1="378" y1="302" x2="438" y2="302"/>
   </g>
   <g stroke="#111" stroke-width="2">
-    <line x1="462" y1="274" x2="482" y2="294"/>
-    <line x1="482" y1="274" x2="462" y2="294"/>
+    <line x1="448" y1="292" x2="468" y2="312"/>
+    <line x1="468" y1="292" x2="448" y2="312"/>
   </g>
-  <text x="492" y="289" font-size="13" fill="#111">not requested, so never sent</text>
+  <text x="459" y="332" text-anchor="middle" font-size="12" fill="#111">not requested</text>
 
   <!-- sealed -->
-  <rect x="52" y="308" width="306" height="102" fill="none" stroke="#111" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <text x="64" y="404" font-size="12.5" fill="#666">sealed for this receiver type</text>
   <g stroke="#111" stroke-width="2">
-    <line x1="378" y1="356" x2="452" y2="356"/>
-    <line x1="462" y1="346" x2="482" y2="366"/>
-    <line x1="482" y1="346" x2="462" y2="366"/>
+    <line x1="378" y1="372" x2="438" y2="372"/>
+    <line x1="448" y1="362" x2="468" y2="382"/>
+    <line x1="468" y1="362" x2="448" y2="382"/>
   </g>
-  <text x="492" y="352" font-size="13" fill="#111">recorded as present and unreadable,</text>
-  <text x="492" y="370" font-size="13" fill="#111">never as verified</text>
+  <text x="459" y="402" text-anchor="middle" font-size="12" fill="#111">present, unreadable</text>
+  <text x="459" y="418" text-anchor="middle" font-size="12" fill="#111">never verified</text>
 
   <!-- service contents -->
   <g font-size="14" fill="#111">
-    <text x="564" y="88">Identity, verified</text>
-    <text x="564" y="128">Age threshold met</text>
-    <text x="564" y="168">Retention, 90 days</text>
-    <text x="564" y="208">Payment method</text>
+    <text x="584" y="92">Identity, verified</text>
+    <text x="584" y="132">Age threshold met</text>
+    <text x="584" y="172">Retention, 90 days</text>
+    <text x="584" y="212">Payment method</text>
   </g>
-  <text x="564" y="244" font-size="12.5" fill="#666">and nothing else</text>
+  <text x="584" y="238" font-size="12" fill="#777">and nothing else</text>
 
   <!-- receipt -->
-  <rect x="540" y="296" width="320" height="132" fill="none" stroke="#111" stroke-width="2"/>
-  <text x="564" y="324" font-size="14" font-weight="bold" fill="#111">Receipt, held by both</text>
-  <g font-size="12.5" fill="#333">
-    <text x="564" y="350">identity verified, age verified by threshold</text>
-    <text x="564" y="370">payment released, retention granted 90 days</text>
-    <text x="564" y="390">marketing denied</text>
-    <text x="564" y="410">health and identity document never transmitted</text>
+  <rect x="560" y="292" width="300" height="138" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="584" y="318" font-size="14" font-weight="bold" fill="#111">Receipt, held by both</text>
+  <g font-size="12" fill="#333">
+    <text x="584" y="342">identity verified, age verified by threshold</text>
+    <text x="584" y="362">payment released, retention granted 90 days</text>
+    <text x="584" y="382">marketing denied</text>
+    <text x="584" y="402">health and identity document</text>
+    <text x="584" y="418">never transmitted</text>
   </g>
 
-  <text x="450" y="466" text-anchor="middle" font-size="13.5" fill="#111">The Subject holds one Manifest. Each Service receives a different view of it.</text>
-  <text x="450" y="498" text-anchor="middle" font-size="12" fill="#777">Figure 3. Projection: released, denied, never requested, and sealed.</text>
+  <text x="450" y="478" text-anchor="middle" font-size="13.5" fill="#111">The Subject holds one Manifest. Each Service receives a different view of it.</text>
+  <text x="450" y="524" text-anchor="middle" font-size="12" fill="#777">Figure 3. Projection: released, denied, never requested, and sealed.</text>
 </svg>
