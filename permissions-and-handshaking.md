@@ -42,7 +42,7 @@ The System does not include the services, the network between them, the payment 
   * Projection- The subset of the Manifest one Service receives.
   * Receipt- A signed record of what was verified, released, refused, and left unreadable.
 
-![Figure 1- Main Actors](figures/actors.svg)
+![Figure 1- Main Actors](https://raw.githubusercontent.com/UniversalManifest/use-cases/main/figures/actors.svg)
 
 ### Permissions and Handshaking Use Case
 
@@ -55,9 +55,11 @@ The System does not include the services, the network between them, the payment 
   7. Both parties write a signed Receipt.
   8. Optional- Subject withdraws a grant later. Service stops relying on it and the withdrawal joins the record.
 
-![Figure 2- The Handshake](figures/handshake-flow.svg)
+![Figure 2- The Handshake](https://raw.githubusercontent.com/UniversalManifest/use-cases/main/figures/handshake-flow.svg)
 
-![Figure 3- Projection](figures/projection.svg)
+The same encounter can be read as what crossed and what did not. A field in the Manifest reaches Service in one of four ways. It is released because Service declared it and Subject granted it. It is denied by Subject's rule. It is never sent because Service did not ask for it. Or it is sealed, and Service records it as present and unreadable rather than as verified.
+
+![Figure 3- Projection](https://raw.githubusercontent.com/UniversalManifest/use-cases/main/figures/projection.svg)
 
 ## Threat Model
 
