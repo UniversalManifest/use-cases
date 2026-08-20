@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+
+  <!-- Subject -->
+  <g transform="translate(120,70)">
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#111" stroke-width="2"/>
+    <line x1="0" y1="16" x2="0" y2="62" stroke="#111" stroke-width="2"/>
+    <line x1="-24" y1="34" x2="24" y2="34" stroke="#111" stroke-width="2"/>
+    <line x1="0" y1="62" x2="-20" y2="96" stroke="#111" stroke-width="2"/>
+    <line x1="0" y1="62" x2="20" y2="96" stroke="#111" stroke-width="2"/>
+    <text x="0" y="124" text-anchor="middle" font-size="17" font-weight="bold" fill="#111">Subject</text>
+    <text x="0" y="145" text-anchor="middle" font-size="13" fill="#555">holds the Manifest</text>
+    <text x="0" y="163" text-anchor="middle" font-size="13" fill="#555">decides what to present</text>
+  </g>
+
+  <!-- Service -->
+  <g transform="translate(690,40)">
+    <rect x="-90" y="0" width="180" height="86" fill="none" stroke="#111" stroke-width="2"/>
+    <text x="0" y="38" text-anchor="middle" font-size="17" font-weight="bold" fill="#111">Service</text>
+    <text x="0" y="62" text-anchor="middle" font-size="13" fill="#555">site, store, checkpoint, app</text>
+    <text x="0" y="118" text-anchor="middle" font-size="13" fill="#555">declares what it needs</text>
+    <text x="0" y="136" text-anchor="middle" font-size="13" fill="#555">decides what to admit</text>
+  </g>
+
+  <!-- exchange arrows -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <line x1="205" y1="96" x2="575" y2="96"/>
+    <polygon points="575,96 563,90 563,102" fill="#111" stroke="none"/>
+    <line x1="575" y1="130" x2="205" y2="130"/>
+    <polygon points="205,130 217,124 217,136" fill="#111" stroke="none"/>
+  </g>
+  <text x="390" y="88" text-anchor="middle" font-size="13" fill="#111">presents a Projection</text>
+  <text x="390" y="150" text-anchor="middle" font-size="13" fill="#111">returns an Outcome and a Receipt</text>
+
+  <!-- Issuer -->
+  <g transform="translate(120,270)">
+    <rect x="-80" y="0" width="160" height="70" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="0" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#111">Issuer</text>
+    <text x="0" y="52" text-anchor="middle" font-size="13" fill="#555">signed earlier</text>
+    <text x="0" y="92" text-anchor="middle" font-size="13" fill="#555">not present at the handshake</text>
+  </g>
+  <g stroke="#111" stroke-width="1.5" stroke-dasharray="5 4" fill="none">
+    <line x1="120" y1="270" x2="120" y2="235"/>
+    <polygon points="120,235 114,247 126,247" fill="#111" stroke="none"/>
+  </g>
+  <text x="140" y="256" font-size="12" fill="#555">signs a Claim into the Manifest</text>
+
+  <!-- Entities -->
+  <g transform="translate(470,255)">
+    <text x="0" y="0" font-size="13" font-weight="bold" fill="#111">ENTITIES</text>
+    <text x="0" y="26" font-size="13" fill="#333">Manifest — the signed capsule the Subject holds</text>
+    <text x="0" y="48" font-size="13" fill="#333">Facet — one typed part of it</text>
+    <text x="0" y="70" font-size="13" fill="#333">Consent Position — a per-purpose grant or denial</text>
+    <text x="0" y="92" font-size="13" fill="#333">Projection — the subset one Service receives</text>
+    <text x="0" y="114" font-size="13" fill="#333">Receipt — a signed record of what happened</text>
+  </g>
+
+  <text x="450" y="404" text-anchor="middle" font-size="12" fill="#777">Figure 1. Two actors act. The Issuer signed earlier and is off stage.</text>
+</svg>

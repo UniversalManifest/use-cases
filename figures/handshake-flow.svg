@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="470" fill="#ffffff"/>
+
+  <!-- lifelines -->
+  <text x="170" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#111">Subject</text>
+  <text x="730" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#111">Service</text>
+  <line x1="170" y1="48" x2="170" y2="400" stroke="#999" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <line x1="730" y1="48" x2="730" y2="400" stroke="#999" stroke-width="1.5" stroke-dasharray="5 5"/>
+
+  <!-- 1 -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <line x1="170" y1="92" x2="718" y2="92"/>
+    <polygon points="730,92 714,85 714,99" fill="#111" stroke="none"/>
+  </g>
+  <text x="180" y="82" font-size="13.5" fill="#111"><tspan font-weight="bold">1.</tspan> Subject presents identity, age proof and Consent Positions</text>
+
+  <g stroke="#111" stroke-width="2" fill="none">
+    <line x1="730" y1="126" x2="182" y2="126"/>
+    <polygon points="170,126 186,119 186,133" fill="#111" stroke="none"/>
+  </g>
+  <text x="180" y="116" font-size="13.5" fill="#111"><tspan font-weight="bold">2.</tspan> Service declares who it is, what it needs, and for how long</text>
+
+  <!-- 3 self -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <path d="M730 166 h48 v34 h-48"/>
+    <polygon points="730,200 746,193 746,207" fill="#111" stroke="none"/>
+  </g>
+  <text x="470" y="186" font-size="13.5" fill="#111"><tspan font-weight="bold">3.</tspan> Service verifies the signature and the age threshold</text>
+  <text x="470" y="204" font-size="12.5" fill="#666">the birth date is never disclosed</text>
+
+  <!-- 4 self subject -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <path d="M170 236 h-48 v34 h48"/>
+    <polygon points="170,270 154,263 154,277" fill="#111" stroke="none"/>
+  </g>
+  <text x="190" y="256" font-size="13.5" fill="#111"><tspan font-weight="bold">4.</tspan> Subject projects only the declared fields</text>
+  <text x="190" y="274" font-size="12.5" fill="#666">marketing denied, retention granted for the stated window</text>
+
+  <!-- 5 -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <line x1="170" y1="310" x2="718" y2="310"/>
+    <polygon points="730,310 714,303 714,317" fill="#111" stroke="none"/>
+  </g>
+  <text x="180" y="300" font-size="13.5" fill="#111"><tspan font-weight="bold">5.</tspan> The transaction proceeds</text>
+
+  <!-- 6 both -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <line x1="170" y1="356" x2="730" y2="356"/>
+    <polygon points="730,356 714,349 714,363" fill="#111" stroke="none"/>
+    <polygon points="170,356 186,349 186,363" fill="#111" stroke="none"/>
+  </g>
+  <text x="290" y="346" font-size="13.5" fill="#111"><tspan font-weight="bold">6.</tspan> Both sides write a signed Receipt</text>
+
+  <!-- outcome -->
+  <rect x="120" y="398" width="660" height="46" fill="none" stroke="#111" stroke-width="1.5"/>
+  <text x="450" y="418" text-anchor="middle" font-size="13.5" fill="#111">Outcome: the Service holds what it declared and nothing else. Both sides hold a record.</text>
+  <text x="450" y="436" text-anchor="middle" font-size="12.5" fill="#666">No form was filled. No document was uploaded. No birth date changed hands.</text>
+
+  <text x="450" y="462" text-anchor="middle" font-size="12" fill="#777">Figure 2. The handshake.</text>
+</svg>
