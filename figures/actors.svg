@@ -1,59 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" font-family="Helvetica, Arial, sans-serif">
-  <rect width="900" height="420" fill="#ffffff"/>
-
-  <!-- Subject -->
-  <g transform="translate(120,70)">
-    <circle cx="0" cy="0" r="16" fill="none" stroke="#111" stroke-width="2"/>
-    <line x1="0" y1="16" x2="0" y2="62" stroke="#111" stroke-width="2"/>
-    <line x1="-24" y1="34" x2="24" y2="34" stroke="#111" stroke-width="2"/>
-    <line x1="0" y1="62" x2="-20" y2="96" stroke="#111" stroke-width="2"/>
-    <line x1="0" y1="62" x2="20" y2="96" stroke="#111" stroke-width="2"/>
-    <text x="0" y="124" text-anchor="middle" font-size="17" font-weight="bold" fill="#111">Subject</text>
-    <text x="0" y="145" text-anchor="middle" font-size="13" fill="#555">holds the Manifest</text>
-    <text x="0" y="163" text-anchor="middle" font-size="13" fill="#555">decides what to present</text>
-  </g>
-
-  <!-- Service -->
-  <g transform="translate(690,40)">
-    <rect x="-90" y="0" width="180" height="86" fill="none" stroke="#111" stroke-width="2"/>
-    <text x="0" y="38" text-anchor="middle" font-size="17" font-weight="bold" fill="#111">Service</text>
-    <text x="0" y="62" text-anchor="middle" font-size="13" fill="#555">site, store, checkpoint, app</text>
-    <text x="0" y="118" text-anchor="middle" font-size="13" fill="#555">declares what it needs</text>
-    <text x="0" y="136" text-anchor="middle" font-size="13" fill="#555">decides what to admit</text>
-  </g>
-
-  <!-- exchange arrows -->
-  <g stroke="#111" stroke-width="2" fill="none">
-    <line x1="205" y1="96" x2="575" y2="96"/>
-    <polygon points="575,96 563,90 563,102" fill="#111" stroke="none"/>
-    <line x1="575" y1="130" x2="205" y2="130"/>
-    <polygon points="205,130 217,124 217,136" fill="#111" stroke="none"/>
-  </g>
-  <text x="390" y="88" text-anchor="middle" font-size="13" fill="#111">presents a Projection</text>
-  <text x="390" y="150" text-anchor="middle" font-size="13" fill="#111">returns an Outcome and a Receipt</text>
-
-  <!-- Issuer -->
-  <g transform="translate(120,270)">
-    <rect x="-80" y="0" width="160" height="70" fill="none" stroke="#111" stroke-width="2" stroke-dasharray="6 4"/>
-    <text x="0" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#111">Issuer</text>
-    <text x="0" y="52" text-anchor="middle" font-size="13" fill="#555">signed earlier</text>
-    <text x="0" y="92" text-anchor="middle" font-size="13" fill="#555">not present at the handshake</text>
-  </g>
-  <g stroke="#111" stroke-width="1.5" stroke-dasharray="5 4" fill="none">
-    <line x1="120" y1="270" x2="120" y2="235"/>
-    <polygon points="120,235 114,247 126,247" fill="#111" stroke="none"/>
-  </g>
-  <text x="140" y="256" font-size="12" fill="#555">signs a Claim into the Manifest</text>
-
-  <!-- Entities -->
-  <g transform="translate(470,255)">
-    <text x="0" y="0" font-size="13" font-weight="bold" fill="#111">ENTITIES</text>
-    <text x="0" y="26" font-size="13" fill="#333">Manifest — the signed capsule the Subject holds</text>
-    <text x="0" y="48" font-size="13" fill="#333">Facet — one typed part of it</text>
-    <text x="0" y="70" font-size="13" fill="#333">Consent Position — a per-purpose grant or denial</text>
-    <text x="0" y="92" font-size="13" fill="#333">Projection — the subset one Service receives</text>
-    <text x="0" y="114" font-size="13" fill="#333">Receipt — a signed record of what happened</text>
-  </g>
-
-  <text x="450" y="404" text-anchor="middle" font-size="12" fill="#777">Figure 1. Two actors act. The Issuer signed earlier and is off stage.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" role="img" aria-labelledby="title desc">
+  <title id="title">Peer participants and roles for each claim</title>
+  <desc id="desc">Visitor sends authorized age-threshold evidence to Museum. Visitor is Subject and Holder for that claim, and Museum is Verifier. Museum sends operating evidence to Visitor, reversing those roles for that claim. An Issuer can be another party or the Subject itself; the latter is self-issued. The recipient checks the claimed Issuer's evidence. Data, Facet, Credential and Receipt are associated objects. Both peers authenticate, decide disclosure and retain their own minimal records.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L9 4 L0 8" fill="none" stroke="#111" stroke-width="1.6"/></marker>
+    <style>text{font-family:Helvetica,Arial,sans-serif;fill:#111;text-anchor:middle} .title{font-size:24px;font-weight:bold}.heading{font-size:20px;font-weight:bold}.label{font-size:18px}.small{font-size:15px}.tiny{font-size:13px}.box{fill:white;stroke:#111;stroke-width:1.5}.line{fill:none;stroke:#111;stroke-width:1.6}</style>
+  </defs>
+  <rect width="900" height="640" fill="white"/>
+  <text x="450" y="34" class="title">Roles follow each claim</text>
+  <text x="450" y="58" class="small">Two peer Entities: each requests and presents information</text>
+  <rect x="50" y="85" width="250" height="78" class="box"/>
+  <text x="175" y="116" class="heading">Visitor</text>
+  <text x="175" y="142" class="small">Controls its information</text>
+  <rect x="600" y="85" width="250" height="78" class="box"/>
+  <text x="725" y="116" class="heading">Museum</text>
+  <text x="725" y="142" class="small">Controls exhibition access</text>
+  <path d="M175 163 V365 M725 163 V365" class="line" stroke-dasharray="5 5"/>
+  <text x="450" y="204" class="label">Authorized age-threshold evidence</text>
+  <path d="M175 227 H725" class="line" marker-end="url(#arrow)"/>
+  <text x="450" y="257" class="small">Subject + Holder: Visitor / Verifier: Museum</text>
+  <text x="450" y="306" class="label">Authorized operating evidence</text>
+  <path d="M725 329 H175" class="line" marker-end="url(#arrow)"/>
+  <text x="450" y="359" class="small">Subject + Holder: Museum / Verifier: Visitor</text>
+  <rect x="135" y="390" width="630" height="68" class="box"/>
+  <text x="450" y="418" class="label">Issuer: another party, or the Subject itself (self-issued)</text>
+  <text x="450" y="442" class="small">The recipient checks the claimed Issuer's evidence.</text>
+  <rect x="35" y="488" width="830" height="108" class="box"/>
+  <text x="450" y="512" class="small">Objects used under UM's disclosure and permission rules</text>
+  <rect x="50" y="528" width="185" height="49" class="box"/>
+  <rect x="255" y="528" width="185" height="49" class="box"/>
+  <rect x="460" y="528" width="185" height="49" class="box"/>
+  <rect x="665" y="528" width="185" height="49" class="box"/>
+  <text x="142.5" y="549" class="label">Data</text>
+  <text x="142.5" y="568" class="tiny">Information held</text>
+  <text x="347.5" y="549" class="label">Facet</text>
+  <text x="347.5" y="568" class="tiny">A portion for a purpose</text>
+  <text x="552.5" y="549" class="label">Credential</text>
+  <text x="552.5" y="568" class="tiny">An Issuer's claims</text>
+  <text x="757.5" y="549" class="label">Receipt</text>
+  <text x="757.5" y="568" class="tiny">Checks and decisions</text>
+  <text x="450" y="624" class="small">Both peers authenticate, decide disclosure and keep their own minimal Receipt.</text>
 </svg>

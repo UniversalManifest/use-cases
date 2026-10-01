@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1275" viewBox="0 0 900 1275" role="img" aria-labelledby="title desc">
+  <title id="title">Requests, checks, decisions and later withdrawal</title>
+  <desc id="desc">Visitor and Museum make contact and state what they want. Museum requests an age answer, permission to keep that answer for up to twenty-four hours, separate permission to keep an admission record and permission for marketing contact. Visitor requests operating evidence and access conditions. Each authenticates the other Entity and its request before sharing information beyond the authentication minimum. Visitor permits the age answer for admission and retention for up to twenty-four hours, and separately permits a minimal admission record for up to twenty-four hours, but refuses marketing. Museum permits its operating evidence. Visitor checks that evidence and the access conditions. If Visitor accepts them, Visitor sends the authorized age answer. Museum checks the answer and admits Visitor if the admission condition is met. Each keeps its own minimal Receipt. Either Entity can later withdraw a Grant it gave. The example shows Museum changing permission at its controlled source and rejecting further access even when notice was missed. Arrows show what depends on what, not required network messages.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L9 4 L0 8" fill="none" stroke="#111" stroke-width="1.6"/></marker>
+    <style>text{font-family:Helvetica,Arial,sans-serif;fill:#111;text-anchor:middle}.title{font-size:24px;font-weight:bold}.heading{font-size:20px;font-weight:bold}.label{font-size:17px}.small{font-size:15px}.box{fill:white;stroke:#111;stroke-width:1.5}.line{fill:none;stroke:#111;stroke-width:1.6}</style>
+  </defs>
+  <rect width="900" height="1275" fill="white"/>
+  <text x="450" y="34" class="title">A museum-entry encounter</text>
+  <text x="450" y="58" class="small">Checks come before sharing beyond the authentication minimum</text>
+  <rect x="75" y="88" width="270" height="65" class="box"/>
+  <text x="210" y="127" class="heading">Visitor</text>
+  <rect x="555" y="88" width="270" height="65" class="box"/>
+  <text x="690" y="127" class="heading">Museum</text>
+  <path d="M210 153 V939 M690 153 V939" class="line" stroke-dasharray="5 5"/>
+  <text x="450" y="180" class="label">1. Make contact: each states what it is and what it wants</text>
+  <path d="M210 198 H690" class="line" marker-end="url(#arrow)"/>
+  <path d="M690 212 H210" class="line" marker-end="url(#arrow)"/>
+  <text x="450" y="236" class="small">Each decides whether it needs anything from the other.</text>
+  <g transform="translate(0,35)">
+  <text x="450" y="224" class="label">2. Request age answer and separate permissions</text>
+  <text x="450" y="244" class="small">Declare purpose, data use and how long records will be kept</text>
+  <path d="M690 261 H210" class="line" marker-end="url(#arrow)"/>
+  <text x="450" y="300" class="label">3. Request operating evidence and access conditions</text>
+  <text x="450" y="320" class="small">Declare intended use and retention</text>
+  <path d="M210 337 H690" class="line" marker-end="url(#arrow)"/>
+  <rect x="60" y="360" width="780" height="85" class="box"/>
+  <text x="450" y="392" class="heading">4. Each authenticates the other Entity and its request</text>
+  <text x="450" y="418" class="small">Only the authentication minimum is shared at this stage.</text>
+  <rect x="35" y="478" width="390" height="98" class="box"/>
+  <text x="230" y="504" class="label">5. Age answer: entry; keep up to 24 hours</text>
+  <text x="230" y="530" class="small">Admission record: permitted for up to 24 hours.</text>
+  <text x="230" y="554" class="small">Visitor refuses marketing contact.</text>
+  <rect x="475" y="478" width="390" height="98" class="box"/>
+  <text x="670" y="511" class="label">5. Museum permits operating evidence</text>
+  <text x="670" y="537" class="small">Access waits for the admission check.</text>
+  <text x="450" y="597" class="label">6. Museum's authorized operating evidence</text>
+  <path d="M690 616 H210" class="line" marker-end="url(#arrow)"/>
+  <text x="450" y="640" class="small">Visitor checks the evidence and access conditions.</text>
+  <text x="450" y="675" class="label">7. If Visitor accepts, Visitor sends the authorized age answer</text>
+  <path d="M210 695 H690" class="line" marker-end="url(#arrow)"/>
+  <text x="450" y="719" class="small">Museum checks that item as Verifier.</text>
+  <text x="450" y="756" class="label">8. Museum grants access if evidence is sufficient</text>
+  <path d="M690 776 H210" class="line" marker-end="url(#arrow)"/>
+  <text x="450" y="801" class="small">Visitor enters only if Museum's evidence and conditions are acceptable.</text>
+  <rect x="60" y="834" width="780" height="72" class="box"/>
+  <text x="450" y="862" class="heading">9. Each keeps a minimal, trustworthy Receipt</text>
+  <text x="450" y="886" class="small">Only actual checks and decisions; sharing needs permission.</text>
+  <rect x="60" y="928" width="780" height="65" class="box"/>
+  <text x="450" y="953" class="label">Failed checks or unmet conditions: withhold information or decline</text>
+  <text x="450" y="977" class="small">Continue only if the remaining conditions and permissions allow it.</text>
+  <rect x="60" y="1015" width="780" height="181" class="box"/>
+  <text x="450" y="1041" class="heading">Later withdrawal</text>
+  <text x="450" y="1065" class="small">Either Entity can withdraw a Grant it gave.</text>
+  <text x="450" y="1085" class="small">Shown: Museum changes permission at its controlled source.</text>
+  <g transform="translate(0,20)">
+  <text x="450" y="1092" class="label">Visitor requests access again</text>
+  <path d="M210 1108 H690" class="line" marker-end="url(#arrow)"/>
+  <text x="450" y="1138" class="label">Access rejected despite old Grant or missed notice</text>
+  <path d="M690 1155 H210" class="line" marker-end="url(#arrow)"/>
+  <text x="450" y="1202" class="small">The stages show what depends on what, not a required message sequence.</text>
+  </g>
+  </g>
+</svg>
