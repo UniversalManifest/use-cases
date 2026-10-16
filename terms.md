@@ -1,6 +1,6 @@
 # Universal Manifest Terms: Permissions and Handshaking
 
-Version 2026-10-15. Draft for working-group review.
+Version 2026-10-16. Draft for working-group review.
 
 This glossary names the roles, actions and artifacts the Permissions and Handshaking use case needs, so the use case uses one term per concept.
 Find a term in the A to Z index, then read its definition, source and the terms it is easily confused with.
@@ -16,7 +16,7 @@ Find a term in the A to Z index, then read its definition, source and the terms 
 Core terms are in bold.
 
 - **A:** [Access conditions](#access-conditions), [Access record](#access-record), **[Access seeker](#access-seeker)**, [Agent](#agent), **[Audit record](#audit-record)**, **[Authentication](#authentication)**, [Authentication evidence](#authentication-evidence), [Authentication minimum](#authentication-minimum), **[Authority to act](#authority-to-act)**
-- **C:** **[Claim](#claim)**, [Conditions](#conditions), [Controlled source](#controlled-source), [Controller evidence](#controller-evidence), **[Credential](#credential)**
+- **C:** **[Claim](#claim)**, **[Client](#client)**, [Conditions](#conditions), [Controlled source](#controlled-source), [Controller evidence](#controller-evidence), **[Credential](#credential)**
 - **D:** [Data](#data), [Data minimization](#data-minimization), [Data-use policy](#data-use-policy), [Decentralized identifier (DID)](#decentralized-identifier-did), **[Denial](#denial)**, [Detect changes](#detect-changes), [Disclosure limit](#disclosure-limit), [Distinguish same-name Entities](#distinguish-same-name-entities)
 - **E:** **[Encounter](#encounter)**, **[Entity](#entity)**, [Ephemeral identifier](#ephemeral-identifier), [Evaluator](#evaluator), **[Evidence](#evidence)**, [Externally issued Credential](#externally-issued-credential)
 - **F:** [Facet](#facet), [Fingerprint](#fingerprint), [Freshness check](#freshness-check), **[Further recipient](#further-recipient)**
@@ -27,7 +27,7 @@ Core terms are in bold.
 - **N:** [Narrow](#narrow)
 - **P:** [Pairwise DID](#pairwise-did), **[Participant](#participant)**, **[Permission](#permission)**, [Predicate proof](#predicate-proof), **[Presentation](#presentation)**, [Protected information](#protected-information), [Purpose](#purpose)
 - **R:** **[Receipt](#receipt)**, **[Recipient](#recipient)**, [Reduce](#reduce), [Reference](#reference), [Reference host](#reference-host), **[Relying Party](#relying-party)**, [Replay](#replay), [Request](#request), [Request check](#request-check), **[Requester](#requester)**, [Resource](#resource), **[Resource controller](#resource-controller)**, **[Responder](#responder)**, [Retention period](#retention-period)
-- **S:** [Selective disclosure](#selective-disclosure), [Self-assertion](#self-assertion), [Self-issued Credential](#self-issued-credential), [Status pointer](#status-pointer), **[Subject](#subject)**, [System](#system)
+- **S:** [Selective disclosure](#selective-disclosure), [Self-assertion](#self-assertion), [Self-issued Credential](#self-issued-credential), [Status pointer](#status-pointer), **[Subject](#subject)**, **[System](#system)**
 - **U:** [Universal Manifest](#universal-manifest), [Unlinkability](#unlinkability)
 - **V:** **[Validation](#validation)**, **[Verification](#verification)**, **[Verifier](#verifier)**
 - **W:** **[Withdrawal](#withdrawal)**
@@ -105,6 +105,15 @@ Core terms are in bold.
 - **Source:** W3C, [VC Data Model 2.0, section 2](https://www.w3.org/TR/2025/REC-vc-data-model-2.0-20250515/#dfn-claims)
 - **Example:** "Is 18 or over."
 - **Not to be confused with:** [Credential](#credential): a set of claims from an Issuer, with evidence of authorship.
+
+### Client
+
+- **Definition:** The application that uses Universal Manifest on behalf of a participant.
+- **Source:** UM proposal
+- **Example:** The visitor's application and the museum's application.
+- **Not to be confused with:** [Participant](#participant): the Entity a client acts for.
+- **Note:** Each participant has its own client: the access seeker's client and the resource controller's client. Clients are part of the [system](#system). Where a requirement names a client, that application acts; Universal Manifest is what it uses, sends or keeps, not an actor. A requirement that names a client by a role, such as the Grantor's client, applies to the client of whichever participant holds that role for that request, item or Grant; either participant can hold such a role. When the participant is itself an application, device or agent, its client is the part of it that uses Universal Manifest. Requested at the OMA3 Technical Working Group meeting of October 15, 2026.
+- **Open question:** [14](#open-questions)
 
 ### Conditions
 
@@ -244,6 +253,7 @@ Core terms are in bold.
 - **Example:** An age-checking service that the resource controller consults.
 - **Not to be confused with:** [Recipient](#recipient): any Entity that receives an item, directly or not.
 - **Note:** A further recipient still takes ordinary roles (Verifier, Relying Party, Grantee). Each onward disclosure needs its own Grant from an Entity authorized to give it.
+- **Open question:** [14](#open-questions)
 
 ### Grant
 
@@ -486,15 +496,17 @@ Core terms are in bold.
 
 ### System
 
-- **Definition:** In the current use case the System is Universal Manifest: it supports the requests, checks, permission decisions and records.
+- **Definition:** The whole vertical: the protocol, [Universal Manifest](#universal-manifest); the [clients](#client); and the data they exchange and keep.
 - **Source:** UM proposal
-- **Note:** The participants, the network between them and any external Issuer are outside the System.
+- **Not to be confused with:** [Universal Manifest](#universal-manifest): the protocol, what the clients use, send and keep; it is part of the system and is not an actor.
+- **Note:** "Vertical" means every layer: the protocol, the applications and the data. The data includes each Entity's [Data](#data). The participants, the network between them and any external Issuer are outside the system. A requirement names a client where that client's own behavior can ensure the outcome once the protocol allows that behavior, and names the system where no single client can ensure it. Requested at the OMA3 Technical Working Group meeting of October 15, 2026. Old meaning, replaced: "In the current use case the System is Universal Manifest: it supports the requests, checks, permission decisions and records", with the participants, the network between them and any external Issuer outside it. The new meaning keeps Universal Manifest in the system and adds the clients and the data.
+- **Open question:** [14](#open-questions)
 
 ### Universal Manifest
 
-- **Definition:** The name has three senses: (1) the standard, published at OMA3; (2) the [System](#system) in this use case; (3) an Entity's own Universal Manifest, the structure in which the Entity keeps its Data, Facets and identifiers, and from which it discloses selected items to other Entities.
+- **Definition:** The name has three senses: (1) the standard, published at OMA3; (2) in this use case, the protocol: what the [clients](#client) use, send and keep, as part of the [system](#system); (3) an Entity's own Universal Manifest, the structure in which the Entity keeps its Data, Facets and identifiers, and from which it discloses selected items to other Entities.
 - **Source:** UM proposal
-- **Note:** This glossary writes "its Universal Manifest" or "an Entity's Universal Manifest" for sense 3, "the System" for sense 2, and "Universal Manifest" alone for the standard.
+- **Note:** This glossary writes "its Universal Manifest" or "an Entity's Universal Manifest" for sense 3, and "Universal Manifest" alone for senses 1 and 2. In sense 2 Universal Manifest is not an actor; the [system](#system) is the whole vertical, of which it is one part. Sense 2 was "the System" until October 15, 2026.
 
 ### Unlinkability
 
@@ -529,17 +541,19 @@ Core terms are in bold.
 - **Definition:** The Grantor ends a Grant for all later actions.
 - **Source:** UM proposal
 - **Not to be confused with:** [Denial](#denial): a refusal of permission before any Grant.
-- **Note:** It cannot recall copies already delivered.
+- **Note:** It does not recall copies already delivered.
 - **Open question:** [6](#open-questions)
 
 ## Role map
 
-| Example participant | General role | What it does |
+| Example | General role | What it does |
 |---|---|---|
 | The visitor | [Access seeker](#access-seeker) | Asks to enter. Subject and Holder of its age-threshold answer; checks and relies on the controller evidence; Grantor of the age answer and the access record. |
 | The museum | [Resource controller](#resource-controller) | Controls the entrance. Checks and relies on the age-threshold answer; Grantor of access and of the controller evidence. |
 | A body that certifies age | [Issuer](#issuer) | Makes the age claim and supplies its evidence. Outside the encounter. |
 | An age-checking service the museum consults | [Further recipient](#further-recipient) | Receives a forwarded item under its own Grant and checks it as Verifier. |
+| The visitor's application; the museum's application | [Client](#client) | Uses Universal Manifest on behalf of its participant: the access seeker's client and the resource controller's client. Requirements name a client where its own behavior can ensure the outcome; a client named by a role, such as the Grantor's client, is the client of whichever participant holds that role. |
+| Universal Manifest, the visitor's and the museum's applications, and the data they exchange and keep | [System](#system) | The whole vertical. Requirements name it where no single client can ensure the outcome. |
 
 ## Commonly confused terms
 
@@ -566,6 +580,7 @@ Core terms are in bold.
 11. **Recipient of an authorized kind.** Who defines which kinds of recipient may read protected information, such as health records? Affects: [Protected information](#protected-information).
 12. **Facet and Credential.** Does a Facet carry a Credential, point to one, or both? (Already open in the current use case.) Affects: [Facet](#facet), [Credential](#credential).
 13. **Access record and Receipt.** The resource controller keeps an access record under the access seeker's Grant and also keeps its own Receipt. Are these one record or two, and if two, what does each contain? Affects: [Access record](#access-record), [Receipt](#receipt).
+14. **Client for a further recipient.** Is the application of a further recipient a client for the item it receives? If it is not, the requirements on each client, such as reporting only what it checked, do not apply to it. Affects: [Client](#client), [System](#system), [Further recipient](#further-recipient).
 
 ## Sources
 

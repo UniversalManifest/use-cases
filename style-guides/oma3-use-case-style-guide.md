@@ -2,7 +2,7 @@
 
 For use cases written for the OMA3 Technical Working Group
 
-Version 1.0, 2026-10-15. Draft for working-group review.
+Version 1.1, 2026-10-16. Draft for working-group review.
 
 ## 1. Purpose
 
@@ -216,9 +216,9 @@ Example: "Issuer- The Entity that makes the claims in a Credential and supplies 
 
 **Rule 76.** The Requirements part opens with the BCP 14 text of Rule 50. The two RFC citations link to RFC 2119 and RFC 8174.
 
-**Rule 77.** Requirements are numbered at two levels. Each group has a number and a short title naming the kind of outcome, and requirement numbers restart within each group. Each numbered requirement has a short title naming the outcome (Rule 54), then one sentence that begins with "UM" and contains one key word.
-Example: "1.1. Independent decisions. UM SHALL allow each requested purpose to receive an independent permission decision."
-An outcome that does not imply technology, policy or regulation (Rule 3) takes the same form: "UM SHALL treat retention beyond the agreed period as a violation." The example in Rule 3 shows the outcome, not this sentence form.
+**Rule 77.** Requirements are numbered at two levels. Each group has a number and a short title naming the kind of outcome, and requirement numbers restart within each group. Each numbered requirement has a short title naming the outcome (Rule 54), then one sentence that contains one key word and begins with the part of the system responsible for the outcome (Rules 29 and 47): a client or the system, as the shared terms sheet's Client and System entries describe. Universal Manifest is not the subject.
+Example: "1.1. Separate decisions. Each client SHALL allow an independent permission decision for each requested action on a resource for a stated purpose."
+An outcome that does not imply technology, policy or regulation (Rule 3) takes the same form: "The system SHALL treat retention beyond the agreed period as a violation." The example in Rule 3 shows the outcome, not this sentence form.
 
 **Rule 78.** Where a numbered requirement already holds several obligations, they are numbered under it (for example 2.2.1 and 2.2.2) instead of renumbering the document.
 
@@ -274,12 +274,13 @@ These questions are for the TWG to settle. Each rule stays as written until the 
 ### Revision record
 
 - **1.0, 2026-10-15:** First edition, drafted for working-group review.
+- **1.1, 2026-10-16:** Rule 77 changed: each requirement begins with the part of the system responsible for its outcome, a client or the system, instead of "UM", following the request at the OMA3 Technical Working Group meeting of 2026-10-15 to name the client or the system. Proposed for TWG agreement; not yet agreed.
 
 ## 7. Sources
 
-- OMA3 Technical Working Group reviews of 2026-09-17 and 2026-10-01
+- OMA3 Technical Working Group reviews of 2026-09-17, 2026-10-01 and 2026-10-15
 - MSF Infrastructure Working Group, 2026-10-02 (continued review of the same use case)
-- Universal Manifest shared terms sheet, draft of 2026-10-15
+- Universal Manifest shared terms sheet, draft of 2026-10-16
 - Universal Manifest use-case writing guide and OMA3 use-case format recipe (project working documents, 2026)
 - MSF Use Case Definition Guidelines (Metaverse Standards Forum, Digital Asset Management Working Group)
 - IETF BCP 14 (RFC 2119, RFC 8174)
