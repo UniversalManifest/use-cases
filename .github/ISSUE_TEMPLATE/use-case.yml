@@ -1,0 +1,41 @@
+name: Use case
+description: Propose a scenario that shows how the Universal Manifest specification is used.
+title: "[use case] "
+labels: ["use-case"]
+body:
+  - type: input
+    id: identifier
+    attributes:
+      label: Identifier
+      description: Short, lowercase words joined by hyphens, such as venue-entry-age-check. It becomes the use case's section anchor, so it must be unique.
+      placeholder: venue-entry-age-check
+    validations:
+      required: true
+  - type: input
+    id: submitter
+    attributes:
+      label: Submitter
+      description: Your name or organization, as it should be credited.
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: What happens, step by step, and between which parties.
+    validations:
+      required: true
+  - type: textarea
+    id: specification
+    attributes:
+      label: Parts of the specification exercised
+      description: The sections or features of the specification this scenario uses, or the gap it shows.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything else a reviewer should know.
+    validations:
+      required: false
